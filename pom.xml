@@ -60,7 +60,7 @@
               <artifactId>docker-maven-plugin</artifactId>
                <version>0.4.11</version>
          <configuration>
-            <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+            <!--  <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
            <dockerDirectory>src/main/docker</dockerDirectory>
            <resources>
            <resource>
@@ -68,7 +68,11 @@
             <directory>${project.build.directory}/</directory>
             <include>${project.build.finalName}.jar</include>
             </resource>
-         </resources>
+         </resources>-->
+           <repository>${docker.image.prefix}/${project.artifactId}</repository>
+					<buildArgs>
+						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+			</buildArgs>
           <serverId>wingtiptoysregistry</serverId>
           <registryUrl>https://wingtiptoysregistry.azurecr.io</registryUrl>
         </configuration>
