@@ -45,6 +45,8 @@
       </resources>
       <serverId>sdtestregistry1</serverId>
       <registryUrl>https://sdtestregistry1.azurecr.io</registryUrl>
+      <username>sdtestregistry1</username>
+      <password>jr1mQywWnD6P4aUc=wRCOQfR0I61dmqA</password>
    </configuration>
 </plugin>
             <!-- end::plugin[] -->
