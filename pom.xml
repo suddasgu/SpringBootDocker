@@ -47,8 +47,9 @@
 							<include>${project.build.finalName}.jar</include>
 						</resource>
 					</resources>
-					<serverId>sdtestregistry1</serverId>
-					<registryUrl>https://sdtestregistry1.azurecr.io</registryUrl>
+					<!--  <serverId>sdtestregistry1</serverId>
+					<registryUrl>https://sdtestregistry1.azurecr.io</registryUrl>-->
+					<serverId>docker-hub</serverId>
 					<skipDockerBuild>${docker.skip}</skipDockerBuild>
 				</configuration>
 				<executions>
@@ -67,7 +68,7 @@
 						</goals>
 						<configuration>
 							<image>${docker.image.prefix}/${project.artifactId}</image>
-							<newName>https://sdtestregistry1.azurecr.io/${docker.image.prefix}/${project.artifactId}:${project.version}</newName>
+							<newName>docker.io/${docker.image.prefix}/${project.artifactId}:${project.version}</newName>
 							<pushImage>true</pushImage>
 						</configuration>
 					</execution>
