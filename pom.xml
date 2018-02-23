@@ -49,6 +49,7 @@
 					</resources>
 					<serverId>sdtestregistry1</serverId>
 					<registryUrl>https://sdtestregistry1.azurecr.io</registryUrl>
+					<skipDockerBuild>${docker.skip}</skipDockerBuild>
 				</configuration>
 				<executions>
 					<execution>
